@@ -14,7 +14,7 @@ int main()
     {
         for (j = 0;j<n; j++)
         {
-            num =1 + rand() % 9 ; // случайные числа от 0 до 20
+            num =1 + rand() % 9 ;
             Array[i][j]= num;
         }
     }
