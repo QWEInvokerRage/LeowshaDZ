@@ -1,42 +1,23 @@
 #include <iostream>
-#include <cmath>
+#include <string>
 #include <Windows.h>
 
 using namespace std;
 
-int FormulaCondition();
-
-int SquareSide, SquareDiagonal, FormulaCheck,S;
-
 int main()
 {
     setlocale(LC_ALL, "ru-RU");
-    FormulaCondition();
-    return 0;
-}
+    const int n = 4;
+    int num,i,j;
+    int Array[4][4] = {{00,01,02,03},{10,11,12,13},{20,21,22,23},{30,31,32,33}};
 
-
-
-int FormulaCondition()
-{
-    cout<<"Input 1 if you have a square side and 2 if diagonal: ";
-    cin>> FormulaCheck;
-    if (FormulaCheck == 1)
+    for (i = 3; i>=0; i--)
     {
-        cout<< "Input square side:";
-        cin>> SquareSide;
-        cout<<"Square area:"<< pow(SquareSide, 2);
+        for (j = 3;j>=0; j--)//0 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+        {
+            cout<< " *" <<Array[i][j]<< "* ";
+        }
+        cout<< "\n";
     }
-    else if (FormulaCheck == 2)
-    {
-        cout<< "Input square diagonal:";
-        cin>>SquareDiagonal;
-        cout<<"Square area:"<< (double)1/2 * pow(SquareDiagonal, 2);
-    }
-    else
-    {
-        cout<<"Ha-ha, nice joke";
-        FormulaCondition();
-    }
-    return 0;
+return 0;
 }
